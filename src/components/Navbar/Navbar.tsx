@@ -27,9 +27,10 @@ export default function Navbar() {
                 <div className="header__links header__links-auth">
                     <Link
                         href={
-                            isCookieAccess
-                                ? PUBLIC_URL.cart()
-                                : PUBLIC_URL.auth("signIn")
+                            PUBLIC_URL.cart()
+                            // isCookieAccess
+                            //     ? PUBLIC_URL.cart()
+                            //     : PUBLIC_URL.auth("signIn")
                         }
                         className="link header__link"
                     >
