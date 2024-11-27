@@ -1,0 +1,26 @@
+.footer {
+    padding: 50px 0;
+    background-color: var(--background-white);
+
+    &__title {
+        font-family: var(--font-neural-face);
+
+        &::first-letter {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 30px;
+        }
+    }
+    &__title-text {
+        margin-left: -6px;
+    }
+    &__content {
+        margin-top: 30px;
+        width: 50%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        row-gap: 26px;
+
+        font-family: var(--font-inter);
+    }
+}

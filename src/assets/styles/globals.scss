@@ -1,0 +1,24 @@
+@use "./normalize";
+@use "../../pages/auth/auth.module.scss";
+@use "../../components/Navbar/Navbar.module.scss";
+@use "../../components/Logo/Logo.module.scss";
+@use "../../components/Layout/Layout.module.scss";
+@use "../../components/Footer/Footer.module.scss";
+@use "../../components/ui/Form/Form.module.scss";
+
+:root {
+    --background-root: rgba(249, 249, 249, 1);
+    --background-white: rgba(255, 255, 255, 1);
+    --color-gray: rgba(179, 179, 179, 1);
+    --red: rgba(219, 38, 38, 1);
+    --base-black: rgba(22, 26, 30, 1);
+}
+
+body {
+    background-color: var(--background-root);
+    color: var(--base-black);
+}
+
+.container {
+    padding: 0 32px;
+}

@@ -1,0 +1,47 @@
+.logo {
+    &__separator {
+        width: 3px;
+        height: 32px;
+        background-color: var(--base-black);
+    }
+}
+
+.text {
+    font-family: var(--font-inter);
+    font-size: 16px;
+}
+.text_cr {
+    color: var(--red);
+}
+.text_upp {
+    text-transform: uppercase;
+}
+.text_w-300 {
+    font-weight: 300;
+}
+.text_w-700 {
+    font-weight: 700;
+}
+.text_font-14 {
+    font-size: 14px;
+}
+.text_font-16 {
+    font-size: 16px;
+}
+.text_font-20 {
+    font-size: 20px;
+}
+.text_font-24 {
+    font-size: 24px;
+}
+.text_und-line {
+    position: relative;
+    text-decoration: underline;
+}
+.text_family-inter {
+    font-family: var(--font-inter);
+}
+
+.text_family-neural {
+    font-family: var(--font-neural-face);
+}
