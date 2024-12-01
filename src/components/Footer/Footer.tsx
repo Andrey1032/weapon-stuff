@@ -5,9 +5,9 @@ export default function Footer() {
     return (
         <footer className="footer ">
             <div className="container">
-                <div className="footer__title">
+                <div className="text text_font-40 text_family-neural text_w-700">
                     w
-                    <span className="footer__title-text text text_s text_upp text_cr">
+                    <span className="footer__subtitle text text_s text_upp text_cr text_w-400">
                         goods
                     </span>
                 </div>

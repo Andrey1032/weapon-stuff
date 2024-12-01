@@ -3,7 +3,7 @@ import Image from "next/image";
 import Logo from "../Logo/Logo";
 import Cookies from "js-cookie";
 import { PUBLIC_URL } from "@/config/url.config";
-import { EnumTokens, getUser } from "@/services/auth/auth-token.service";
+import { EnumTokens, getUserLogin } from "@/services/auth/auth-token.service";
 import { authService } from "@/services/auth/auth.service";
 
 export default function Navbar() {
@@ -26,12 +26,7 @@ export default function Navbar() {
                 </div>
                 <div className="header__links header__links-auth">
                     <Link
-                        href={
-                            PUBLIC_URL.cart()
-                            // isCookieAccess
-                            //     ? PUBLIC_URL.cart()
-                            //     : PUBLIC_URL.auth("signIn")
-                        }
+                        href={PUBLIC_URL.cart()}
                         className="link header__link"
                     >
                         <Image
@@ -56,7 +51,7 @@ export default function Navbar() {
                             height={14}
                         />
                         <p className="text text_w-300">
-                            {isCookieAccess ? `${getUser()}` : "Войти"}
+                            {isCookieAccess ? `${getUserLogin()}` : "Войти"}
                         </p>
                     </Link>
                 </div>

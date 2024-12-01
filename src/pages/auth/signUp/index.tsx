@@ -1,7 +1,6 @@
 "use client";
 
 import { AuthFields } from "@/pages/auth/AuthFields";
-import Link from "next/link";
 import { API_URL } from "@/config/api.config";
 import { useRouter } from "next/navigation";
 import { useAuthForm } from "@/hooks/useAuthForm";
@@ -16,7 +15,9 @@ export default function Auth() {
     return (
         <div className="auth">
             <form onSubmit={form.handleSubmit(onSubmit)} className="form">
-                <h1 className="form__title">Регистрация</h1>
+                <h1 className="form__title text text_font-36 text_w-500">
+                    Регистрация
+                </h1>
                 <AuthFields form={form} isReg={true} />
                 <ErrorMessage errors={form.formState.errors} name="apiError" />
                 <div className="form__buttons">

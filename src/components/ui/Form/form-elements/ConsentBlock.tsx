@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function ConsentBlock() {
     return (
         <div>
-            <p className="form__info text text_w-300 text_font-14 ">
+            <p className="text text_w-300 text_font-14">
                 <span>
                     Нажимая &quot;Войти&quot; или
                     &quot;Зарегистрироваться&quot; вы подтверждаете свое

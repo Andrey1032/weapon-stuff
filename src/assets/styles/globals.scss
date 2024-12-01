@@ -1,10 +1,16 @@
 @use "./normalize";
 @use "../../pages/auth/auth.module.scss";
+@use "../../pages/main/Main.module.scss";
 @use "../../components/Navbar/Navbar.module.scss";
 @use "../../components/Logo/Logo.module.scss";
 @use "../../components/Layout/Layout.module.scss";
 @use "../../components/Footer/Footer.module.scss";
 @use "../../components/ui/Form/Form.module.scss";
+@use "../../components/CardList/Card/Card.module.scss";
+@use "../../components/CardList/CardList.module.scss";
+@use "../../components/List/List.module.scss";
+@use "../../components/Catalog/Catalog.module.scss";
+@use "../../components/ui/InputSearch/InputSearch.module.scss";
 
 :root {
     --background-root: rgba(249, 249, 249, 1);
@@ -21,4 +27,65 @@ body {
 
 .container {
     padding: 0 32px;
+}
+
+.text {
+    font-family: var(--font-inter);
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.04em;
+
+    color: var(--base-black);
+}
+.text_cr {
+    color: var(--red);
+}
+.text_cg {
+    color: var(--color-gray);
+}
+.text_upp {
+    text-transform: uppercase;
+}
+.text_w-400 {
+    font-weight: 400;
+}
+.text_w-500 {
+    font-weight: 500;
+}
+.text_w-600 {
+    font-weight: 600;
+}
+.text_w-700 {
+    font-weight: 700;
+}
+.text_font-14 {
+    font-size: 14px;
+}
+.text_font-20 {
+    font-size: 20px;
+}
+.text_font-24 {
+    font-size: 24px;
+}
+.text_font-36 {
+    font-size: 36px;
+}
+.text_font-40 {
+    font-size: 40px;
+}
+.text_font-48 {
+    font-size: 48px;
+}
+.text_font-96 {
+    font-size: 96px;
+}
+.text_und-line {
+    text-decoration: underline;
+}
+
+.text_let-spac-2 {
+    letter-spacing: -0.02em;
+}
+.text_family-neural {
+    font-family: var(--font-neural-face);
 }

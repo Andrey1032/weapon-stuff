@@ -20,7 +20,7 @@ class AuthService {
             EnumTokens.REFRESH_TOKEN,
             response.data?.refresh_token
         );
-
+        
         return response;
     }
 

@@ -1,0 +1,31 @@
+.list {
+    display: flex;
+    gap: 10px;
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        background-color: var(--background-root);
+
+        padding: 10px 20px;
+        border-radius: 20px;
+
+        line-height: 14px;
+
+        &.active {
+            background-color: var(--red);
+            color: var(--background-white);
+        }
+    }
+
+    &__item_pagination {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.list_pagination {
+    justify-content: center;
+}

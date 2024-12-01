@@ -19,7 +19,6 @@ export function AuthFields({ form, isReg = false }: AuthFieldsProps) {
                         render={({ field }) => (
                             <Input
                                 field={field}
-                                className="form__input"
                                 type="email"
                                 placeholder="Почта"
                                 errors={form.formState.errors}
@@ -40,7 +39,6 @@ export function AuthFields({ form, isReg = false }: AuthFieldsProps) {
                         render={({ field }) => (
                             <Input
                                 field={field}
-                                className="form__input"
                                 placeholder="Логин"
                                 errors={form.formState.errors}
                                 name={field.name}
@@ -60,7 +58,6 @@ export function AuthFields({ form, isReg = false }: AuthFieldsProps) {
                         render={({ field }) => (
                             <Input
                                 field={field}
-                                className="form__input"
                                 type="password"
                                 placeholder="Пароль"
                                 autoComplete="new-password"
@@ -82,7 +79,6 @@ export function AuthFields({ form, isReg = false }: AuthFieldsProps) {
                         render={({ field }) => (
                             <Input
                                 field={field}
-                                className="form__input"
                                 type="password"
                                 placeholder="Повторите пароль"
                                 autoComplete="new-password"
@@ -103,7 +99,6 @@ export function AuthFields({ form, isReg = false }: AuthFieldsProps) {
                         render={({ field }) => (
                             <Input
                                 field={field}
-                                className="form__input"
                                 placeholder="Логин"
                                 autoComplete="username"
                                 errors={form.formState.errors}
@@ -120,7 +115,6 @@ export function AuthFields({ form, isReg = false }: AuthFieldsProps) {
                         render={({ field }) => (
                             <Input
                                 field={field}
-                                className="form__input"
                                 type="password"
                                 placeholder="Пароль"
                                 autoComplete="current-password"

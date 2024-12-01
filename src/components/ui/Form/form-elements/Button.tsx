@@ -1,13 +1,16 @@
 import React, { ButtonHTMLAttributes } from "react";
 
 function Button({
-    className,
     type,
     value,
     onClick,
 }: ButtonHTMLAttributes<HTMLButtonElement>) {
     return (
-        <button type={type} className={className} onClick={onClick}>
+        <button
+            type={type}
+            className="form__button text text_w-400"
+            onClick={onClick}
+        >
             {value}
         </button>
     );

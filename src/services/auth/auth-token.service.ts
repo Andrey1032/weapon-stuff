@@ -7,7 +7,7 @@ export enum EnumTokens {
     REFRESH_TOKEN = "refresh_token",
 }
 
-export const getUser = () => {
+export const getUserLogin = () => {
     const token = Cookies.get(EnumTokens.ACCESS_TOKEN);
     const data = <IUser>jwtDecode(String(token));
     return data.login;

@@ -1,0 +1,11 @@
+.catalog {
+    display: grid;
+    padding: 20px 0px;
+    gap: 20px;
+
+    background-color: var(--background-white);
+
+    &__title {
+        line-height: 48px;
+    }
+}

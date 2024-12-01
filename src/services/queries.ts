@@ -1,24 +1,31 @@
 import { gql } from "@apollo/client";
 
 export const allProducts = gql`
-    query allProducts($take: Int, $skip: Int) {
-        products(take: $take, skip: $skip) {
+    query allProducts(
+        $take: Int
+        $skip: Int
+        $search: String
+        $categoryId: Int
+    ) {
+        products(
+            take: $take
+            skip: $skip
+            search: $search
+            categoryId: $categoryId
+        ) {
             totalCount
             products {
                 id
                 title
-                description
                 price
                 caliber
-                magazine
-                article
-                barrel_length
-                category_id
                 ProductDocument {
                     Document {
                         url
-                        size
                     }
+                }
+                Category {
+                    title
                 }
             }
         }
@@ -33,13 +40,10 @@ export const oneProduct = gql`
             price
             caliber
             magazine
-            article
             barrel_length
-            category_id
             ProductDocument {
                 Document {
                     url
-                    size
                 }
             }
         }

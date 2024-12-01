@@ -9,18 +9,16 @@ interface IInput {
         | ControllerRenderProps<IAuthForm, "login">
         | ControllerRenderProps<IAuthForm, "password">
         | ControllerRenderProps<IAuthForm, "repeat_password">;
-    className: string;
     type?: string;
     placeholder: string;
     onClick?: () => void;
     errors?: FieldErrors<IAuthForm>;
-    name?: keyof IAuthForm;
+    name: keyof IAuthForm;
     autoComplete?: HTMLInputAutoCompleteAttribute;
 }
 
 export default function Input({
     field,
-    className,
     type = "text",
     placeholder,
     onClick,
@@ -32,7 +30,7 @@ export default function Input({
         <>
             <input
                 {...field}
-                className={className}
+                className="form__input text text_font-20 text_w-300 text_let-spac-2"
                 type={type}
                 placeholder={placeholder}
                 autoComplete={autoComplete}
