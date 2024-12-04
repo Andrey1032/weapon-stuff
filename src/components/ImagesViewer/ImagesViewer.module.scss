@@ -1,0 +1,27 @@
+.images-viewer {
+    padding: 125px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+    &__list-item {
+        width: 140px;
+        height: 84px;
+        object-fit: contain;
+        opacity: 0.5;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+    &__image {
+        margin: auto;
+        width: 1090px;
+        height: 368px;
+        object-fit: contain;
+    }
+}

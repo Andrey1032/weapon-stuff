@@ -9,8 +9,12 @@ export enum EnumTokens {
 
 export const getUserLogin = () => {
     const token = Cookies.get(EnumTokens.ACCESS_TOKEN);
-    const data = <IUser>jwtDecode(String(token));
-    return data.login;
+    try {
+        const data = <IUser>jwtDecode(String(token));
+        return data?.login;
+    } catch {
+        return "";
+    }
 };
 
 export const getAccessToken = () => {

@@ -1,4 +1,3 @@
-"use client";
 import useDebounce from "@/hooks/useDebounce";
 import Image from "next/image";
 import { usePathname, useSearchParams } from "next/navigation";
@@ -15,8 +14,14 @@ export default function InputSearch({ delay }: Props) {
     const pathname = usePathname();
     const params = new URLSearchParams(searchParams);
 
-    const [value, setValue] = useState(searchParams.get("search") || null);
+    const defaultValue = searchParams.get("search");
+
+    const [value, setValue] = useState(defaultValue);
     const debouncedValue = useDebounce(value, delay);
+
+    useEffect(() => {
+        setValue(defaultValue);
+    }, [defaultValue]);
 
     useEffect(() => {
         if (debouncedValue !== null) {

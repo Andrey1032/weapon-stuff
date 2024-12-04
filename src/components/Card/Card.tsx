@@ -1,5 +1,3 @@
-"use client";
-
 import { SERVER_URL } from "@/config/api.config";
 import { PUBLIC_URL } from "@/config/url.config";
 import { IProduct } from "@/shared/types/product.interface";
@@ -16,15 +14,15 @@ export default function Card({ product, large }: Card) {
     const router = useRouter();
     return (
         <div
-            className={large ? "card-large card" : "card"}
+            className={`${large && "card_large"} card`}
             onClick={() => router.push(PUBLIC_URL.goods(`${product.id}`))}
         >
             <Image
                 className={!large ? "card__image" : "card__image large"}
                 src={`${SERVER_URL}/static/${product?.ProductDocument[0]?.Document.url}`}
                 priority={true}
-                width={!large ? 398 : 1552}
-                height={!large ? 134 : 533}
+                width={398}
+                height={134}
                 alt="product image"
             />
             <div className="card__category text text_let_spa-2">
@@ -36,7 +34,7 @@ export default function Card({ product, large }: Card) {
                         className={`card__title ${
                             large
                                 ? "text text_font-96 text_w-700 text_family-neural"
-                                : "text text_font-20 text_w-500"
+                                : "card__title_subtitle text text_font-20 text_w-500 "
                         }`}
                     >
                         {product?.title}

@@ -12,6 +12,8 @@ export default function Index() {
     const router = useRouter();
     const { onSubmit, form } = useAuthForm(false);
 
+    
+
     return (
         <div className="auth">
             <form onSubmit={form.handleSubmit(onSubmit)} className="form">
@@ -28,11 +30,13 @@ export default function Index() {
                 </button>
                 <div className="form__buttons">
                     <Button
+                        className="button_1"
                         type="submit"
                         value="Войти"
                         onClick={() => form.clearErrors("apiError")}
                     />
                     <Button
+                        className="button_2"
                         type="button"
                         value="Зарегистрироваться"
                         onClick={() => router.push(API_URL.auth("/signUp"))}

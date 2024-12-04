@@ -22,12 +22,12 @@ export default function Auth() {
                 <ErrorMessage errors={form.formState.errors} name="apiError" />
                 <div className="form__buttons">
                     <Button
-                        className="form__button"
+                        className="button_1"
                         type="submit"
                         value="Зарегистрироваться"
                     />
                     <Button
-                        className="form__button"
+                        className="button_2"
                         type="button"
                         value="Войти в аккаунт"
                         onClick={() => router.push(API_URL.auth("/signIn"))}

@@ -60,3 +60,19 @@ export const allCategories = gql`
         }
     }
 `;
+
+export const userBasket = gql`
+    query userBasket {
+        basketForUser {
+            totalCount
+            productsInBasket {
+                basket_id
+                product_id
+                value
+                Product {
+                    id
+                }
+            }
+        }
+    }
+`;

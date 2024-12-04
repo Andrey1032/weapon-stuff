@@ -6,7 +6,7 @@
     border-radius: 24px;
 
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     flex-direction: column;
     gap: 20px;
 
@@ -39,13 +39,12 @@
         border-radius: 8px;
 
         cursor: pointer;
-
-        &:first-child {
-            color: var(--background-white);
-            background-color: var(--base-black);
-        }
-        &:last-child {
-            border: 1px solid var(--color-gray);
-        }
     }
+}
+.button_1 {
+    color: var(--background-white);
+    background-color: var(--base-black);
+}
+.button_2 {
+    border: 1px solid var(--color-gray);
 }

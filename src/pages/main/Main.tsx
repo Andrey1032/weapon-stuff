@@ -6,7 +6,7 @@ export default function Main() {
     const { data: mainProduct } = productService.getOneProducts(1);
     return (
         <div className="main">
-            <div className="main__header container">
+            <div className="container">
                 <Card product={mainProduct?.product} large />
             </div>
             <Catalog />

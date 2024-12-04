@@ -1,16 +1,22 @@
 @use "./normalize";
 @use "../../pages/auth/auth.module.scss";
 @use "../../pages/main/Main.module.scss";
+@use "../../pages/goods/Goods.module.scss";
+@use "../../pages/cart/Cart.module.scss";
 @use "../../components/Navbar/Navbar.module.scss";
 @use "../../components/Logo/Logo.module.scss";
 @use "../../components/Layout/Layout.module.scss";
 @use "../../components/Footer/Footer.module.scss";
 @use "../../components/ui/Form/Form.module.scss";
-@use "../../components/CardList/Card/Card.module.scss";
+@use "../../components/Card/Card.module.scss";
 @use "../../components/CardList/CardList.module.scss";
 @use "../../components/List/List.module.scss";
 @use "../../components/Catalog/Catalog.module.scss";
+@use "../../components/ImagesViewer/ImagesViewer.module.scss";
+@use "../../components/Options/Options.module.scss";
 @use "../../components/ui/InputSearch/InputSearch.module.scss";
+@use "../../components/BasketCard/BasketCard.module.scss";
+@use "../../components/Counter/Counter.module.scss";
 
 :root {
     --background-root: rgba(249, 249, 249, 1);
@@ -34,8 +40,6 @@ body {
     font-size: 16px;
     font-weight: 300;
     letter-spacing: -0.04em;
-
-    color: var(--base-black);
 }
 .text_cr {
     color: var(--red);
