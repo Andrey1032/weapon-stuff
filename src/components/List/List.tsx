@@ -1,15 +1,26 @@
 import { ICategory } from "@/shared/types/category.interface";
-import React from "react";
 import ListItem from "./ListItem";
-import { categoryService } from "@/services/category.service";
 
-export default function CategoriesList() {
-    const { data } = categoryService.getAllCategory();
+interface CategoriesList {
+    dataCategories: ICategory[];
+    categorySelect: string | number | undefined;
+    setCategorySelect: (v: number) => void;
+}
 
+export default function CategoriesList({
+    dataCategories,
+    categorySelect,
+    setCategorySelect,
+}: CategoriesList) {
     return (
-        <div className="list container">
-            {data?.categories?.categories?.map((category: ICategory) => (
-                <ListItem {...category} key={category.id} />
+        <div className="list">
+            {dataCategories?.map((category: ICategory) => (
+                <ListItem
+                    {...category}
+                    key={category.id}
+                    setCategorySelect={setCategorySelect}
+                    active={categorySelect === category.id}
+                />
             ))}
         </div>
     );

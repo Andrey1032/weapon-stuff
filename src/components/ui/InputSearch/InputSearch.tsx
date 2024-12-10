@@ -1,38 +1,25 @@
 import useDebounce from "@/hooks/useDebounce";
 import Image from "next/image";
-import { usePathname, useSearchParams } from "next/navigation";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-
+import style from "./InputSearch.module.scss";
 type Props = {
     delay?: number;
+    setSearch: (v: string) => void;
+    defaultValue: string;
 };
 
-export default function InputSearch({ delay }: Props) {
-    const router = useRouter();
-    const searchParams = useSearchParams();
-    const pathname = usePathname();
-    const params = new URLSearchParams(searchParams);
-
-    const defaultValue = searchParams.get("search");
-
+export default function InputSearch({ delay, setSearch, defaultValue }: Props) {
     const [value, setValue] = useState(defaultValue);
     const debouncedValue = useDebounce(value, delay);
 
     useEffect(() => {
-        setValue(defaultValue);
-    }, [defaultValue]);
-
-    useEffect(() => {
         if (debouncedValue !== null) {
-            params.set("search", String(debouncedValue));
-            params.set("skip", "0");
-            router.replace(`${pathname}?${params.toString()}`);
+            setSearch(debouncedValue);
         }
     }, [debouncedValue]);
 
     return (
-        <div className="search-input">
+        <div className={style["search-input"]}>
             <Image
                 className="search-input__icon"
                 src={"/search.svg"}

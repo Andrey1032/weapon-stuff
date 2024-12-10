@@ -1,4 +1,3 @@
-"use client";
 
 import { AuthFields } from "@/pages/auth/AuthFields";
 import { useRouter } from "next/navigation";
@@ -8,6 +7,8 @@ import Button from "@/components/ui/Form/form-elements/Button";
 import { ErrorMessage } from "@hookform/error-message";
 import ConsentBlock from "@/components/ui/Form/form-elements/ConsentBlock";
 
+import style from  "../auth.module.scss"
+
 export default function Index() {
     const router = useRouter();
     const { onSubmit, form } = useAuthForm(false);
@@ -15,7 +16,7 @@ export default function Index() {
     
 
     return (
-        <div className="auth">
+        <div className={style.auth}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="form">
                 <h1 className="form__title text text_font-36 text_w-500">
                     Вход в аккаунт

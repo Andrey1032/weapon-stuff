@@ -8,4 +8,9 @@
     &__title {
         line-height: 48px;
     }
+    &__filters {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }

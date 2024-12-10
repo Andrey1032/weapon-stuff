@@ -30,7 +30,7 @@ export const getRefreshToken = () => {
 export const saveTokenStorage = (
     nameToken: EnumTokens,
     value: string,
-    expires: number = 1
+    expires: number | Date = 1
 ) => {
     Cookies.set(nameToken, value, {
         domain: process.env.APP_DOMAIN,

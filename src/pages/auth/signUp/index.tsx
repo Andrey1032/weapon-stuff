@@ -7,13 +7,14 @@ import { useAuthForm } from "@/hooks/useAuthForm";
 import ConsentBlock from "@/components/ui/Form/form-elements/ConsentBlock";
 import Button from "@/components/ui/Form/form-elements/Button";
 import { ErrorMessage } from "@hookform/error-message";
+import style from  "../auth.module.scss"
 
 export default function Auth() {
     const router = useRouter();
     const { onSubmit, form } = useAuthForm(true);
 
     return (
-        <div className="auth">
+        <div className={style.auth}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="form">
                 <h1 className="form__title text text_font-36 text_w-500">
                     Регистрация
@@ -25,6 +26,7 @@ export default function Auth() {
                         className="button_1"
                         type="submit"
                         value="Зарегистрироваться"
+                        onClick={() => form.clearErrors("apiError")}
                     />
                     <Button
                         className="button_2"

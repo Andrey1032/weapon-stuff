@@ -1,9 +1,9 @@
 import { useQuery } from "@apollo/client";
-import { allCategories } from "./queries";
+import { allCategoriesQuery } from "./queries";
 
 class CategoryService {
     getAllCategory = () => {
-        const { loading, error, data } = useQuery(allCategories);
+        const { loading, error, data } = useQuery(allCategoriesQuery);
 
         return { loading, error, data };
     };

@@ -1,5 +1,5 @@
 import { useQuery } from "@apollo/client";
-import { allProducts, oneProduct } from "./queries";
+import { allProductsQuery, oneProductQuery } from "./queries";
 
 class ProductService {
     getAllProducts = (
@@ -8,7 +8,7 @@ class ProductService {
         search?: string,
         categoryId?: number
     ) => {
-        const { loading, error, data } = useQuery(allProducts, {
+        const { loading, error, data } = useQuery(allProductsQuery, {
             variables: {
                 take: take,
                 skip: skip,
@@ -20,7 +20,7 @@ class ProductService {
         return { loading, error, data };
     };
     getOneProducts = (id: number) => {
-        const { loading, error, data } = useQuery(oneProduct, {
+        const { loading, error, data } = useQuery(oneProductQuery, {
             variables: { id },
         });
 

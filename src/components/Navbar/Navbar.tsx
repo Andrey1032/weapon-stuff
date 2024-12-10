@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../Logo/Logo";
@@ -14,7 +15,7 @@ export default function Navbar() {
             <nav className="header__nav ">
                 <Logo />
                 <div className="header__links">
-                    <Link href={PUBLIC_URL.main()} className="link">
+                    <Link href={PUBLIC_URL.home()} className="link">
                         <p className="text text_w-300">Главная</p>
                     </Link>
                     <Link href={""} className="link">

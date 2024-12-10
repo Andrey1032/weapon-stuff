@@ -25,7 +25,7 @@ export function useAuthForm(isReg: boolean) {
 
         authService
             .main(isReg ? "registration" : "login", data)
-            .then(() => router.push(PUBLIC_URL.main()))
+            .then(() => router.push(PUBLIC_URL.home()))
             .catch((e) =>
                 form.setError("apiError", {
                     type: "custom",

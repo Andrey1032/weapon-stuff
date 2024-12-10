@@ -1,12 +1,12 @@
-import { type NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 import { PUBLIC_URL } from "./config/url.config";
 import { EnumTokens } from "./services/auth/auth-token.service";
 
 export async function middleware(request: NextRequest) {
-    const refresh_token = request.cookies.get(EnumTokens.REFRESH_TOKEN)?.value;
+    const access_token = request.cookies.get(EnumTokens.ACCESS_TOKEN)?.value;
 
-    if (refresh_token === undefined) {
+    if (!access_token) {
         return NextResponse.redirect(
             new URL(PUBLIC_URL.auth("signIn"), request.url)
         );
@@ -16,5 +16,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-    matcher: [`/cart/:path*`,],
+    matcher: [`/cart/:path*`],
 };

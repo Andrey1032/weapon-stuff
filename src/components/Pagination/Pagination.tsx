@@ -1,5 +1,4 @@
-import { usePathname, useSearchParams } from "next/navigation";
-import { useRouter } from "next/router";
+import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import React from "react";
 
 interface Pagination {
@@ -24,7 +23,9 @@ export default function Pagination({ count }: Pagination) {
                     key={id}
                     onClick={() => {
                         params.set("skip", String(id));
-                        router.replace(`${pathname}?${params.toString()}`);
+                        router.replace(`${pathname}?${params.toString()}`, {
+                            scroll: false,
+                        });
                     }}
                 >
                     {id + 1}

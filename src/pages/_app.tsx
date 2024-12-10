@@ -1,7 +1,8 @@
+
 import "@/assets/styles/globals.scss";
 import type { AppProps } from "next/app";
-import Layout from "../components/Layout/layout";
-import { Providers } from "@/components/providers";
+import { Providers } from "@/providers/providers";
+import Layout from "@/components/Layout/layout";
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
@@ -9,6 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <Layout>
                 <Component {...pageProps} />
             </Layout>
+                
         </Providers>
     );
 }

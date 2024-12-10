@@ -15,12 +15,16 @@ class AuthService {
             data,
         });
 
-        saveTokenStorage(EnumTokens.ACCESS_TOKEN, response.data?.access_token);
+        saveTokenStorage(
+            EnumTokens.ACCESS_TOKEN,
+            response.data?.access_token,
+            new Date().getTime() + 1 * 60 * 1000
+        );
         saveTokenStorage(
             EnumTokens.REFRESH_TOKEN,
             response.data?.refresh_token
         );
-        
+
         return response;
     }
 
@@ -30,7 +34,11 @@ class AuthService {
             method: "POST",
         });
 
-        saveTokenStorage(EnumTokens.ACCESS_TOKEN, response.data?.access_token);
+        saveTokenStorage(
+            EnumTokens.ACCESS_TOKEN,
+            response.data?.access_token,
+            new Date().getTime() + 1 * 60 * 1000
+        );
         saveTokenStorage(
             EnumTokens.REFRESH_TOKEN,
             response.data?.refresh_token
